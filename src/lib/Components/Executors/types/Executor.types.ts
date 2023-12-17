@@ -40,10 +40,20 @@ export type AnyResourceClassBase =
   | '2xlarge+';
 
 /**
+ * ARM specific resource classes found for an executor object for select use cases
+ */
+
+export type ArmResourceClassBase =
+  | 'arm.medium'
+  | 'arm.large'
+  | 'arm.xlarge'
+  | 'arm.2xlarge';
+
+/**
  * The valid resource classes for advanced use cases
  */
 export type AnyResourceClassExtended =
-  | MachineResourceClassArm
+  | ArmResourceClassBase
   | MachineResourceClassGPU
   | MacOSResourceClassAdvanced;
 

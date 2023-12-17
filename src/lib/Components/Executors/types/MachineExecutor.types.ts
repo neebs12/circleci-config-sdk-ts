@@ -1,5 +1,5 @@
 import { BooleanParameter, StringParameter } from '../../Parameters/types';
-import { AnyResourceClass } from './Executor.types';
+import { AnyResourceClass, ArmResourceClassBase } from './Executor.types';
 
 export type MachineExecutorShape = {
   image: StringParameter;
@@ -10,11 +10,7 @@ export type MachineExecutorShape = {
  * The available GPU Machine (Linux) Resource Classes.
  * @see {@link https://circleci.com/docs/configuration-reference#arm-execution-environment-linux} for specifications of each class.
  */
-export type MachineResourceClassArm =
-  | 'arm.medium'
-  | 'arm.large'
-  | 'arm.xlarge'
-  | 'arm.2xlarge';
+export type MachineResourceClassArm = ArmResourceClassBase
 
 /**
  * The available Machine (Linux) Resource Classes.
